@@ -412,12 +412,24 @@ h1, h2, h3, h4 {
   background: var(--surface-2);
   border: 1px solid var(--border);
   border-radius: 2px;
+  box-sizing: border-box;
   color: var(--text-primary);
   font-family: var(--font-body);
   font-size: 0.875rem;
+  max-width: 100%;
+  min-width: 0;
   padding: 0.6rem 0.875rem;
   width: 100%;
   transition: border-color 0.2s ease;
+}
+
+.gold-input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+}
+
+.gold-input[type="date"]::-webkit-date-and-time-value {
+  text-align: center;
 }
 
 .gold-input:focus {

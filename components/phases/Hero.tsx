@@ -90,7 +90,7 @@ export default function Hero() {
             className="text-center text-xs tracking-widest uppercase font-mono"
             style={{ color: "var(--gold)" }}
           >
-            CAPITAL CLOSE · CAPITAL CLOSE PARTNERS
+            CAPITAL CLOSE PARTNERS
           </span>
           <div
             className="h-px w-12"
@@ -139,7 +139,7 @@ export default function Hero() {
             Raise Day Tracker
           </p>
           <div className="space-y-6">
-            <div className="w-full max-w-[300px] mx-auto">
+            <div className="w-full max-w-[280px] mx-auto">
               <label
                 className="block text-xs mb-1 text-center"
                 style={{ color: "var(--text-muted)" }}
@@ -150,7 +150,7 @@ export default function Hero() {
                 type="date"
                 value={startDate}
                 onChange={handleDateChange}
-                className="gold-input"
+                className="gold-input text-center"
               />
             </div>
             {dayNumber !== null && (
