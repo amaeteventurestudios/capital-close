@@ -77,17 +77,17 @@ export default function Hero() {
         }}
       />
 
-      <div className="relative max-w-5xl mx-auto px-6 py-20">
+      <div className="relative max-w-5xl mx-auto px-6 py-20 text-center md:text-left">
         {/* Eyebrow */}
         <div
-          className={`flex items-center gap-3 mb-8 opacity-0-init ${visible ? "animate-fade-up" : ""}`}
+          className={`flex items-center md:items-start justify-center md:justify-start gap-3 mb-8 opacity-0-init ${visible ? "animate-fade-up" : ""}`}
         >
           <div
             className="h-px w-12"
             style={{ background: "var(--gold)" }}
           />
           <span
-            className="text-xs tracking-widest uppercase font-mono"
+            className="text-center md:text-left text-xs tracking-widest uppercase font-mono"
             style={{ color: "var(--gold)" }}
           >
             CAPITAL CLOSE · CAPITAL CLOSE PARTNERS
@@ -96,7 +96,7 @@ export default function Hero() {
 
         {/* Headline */}
         <h1
-          className={`font-display mb-6 opacity-0-init ${visible ? "animate-fade-up delay-100" : ""}`}
+          className={`font-display mb-6 text-center md:text-left opacity-0-init ${visible ? "animate-fade-up delay-100" : ""}`}
           style={{
             fontSize: "clamp(3rem, 8vw, 7rem)",
             lineHeight: "0.95",
@@ -113,7 +113,7 @@ export default function Hero() {
 
         {/* Subline */}
         <p
-          className={`max-w-xl mb-12 opacity-0-init ${visible ? "animate-fade-up delay-200" : ""}`}
+          className={`max-w-xl mx-auto md:mx-0 mb-12 text-center md:text-left opacity-0-init ${visible ? "animate-fade-up delay-200" : ""}`}
           style={{
             fontSize: "1.1rem",
             color: "var(--text-secondary)",
@@ -126,18 +126,18 @@ export default function Hero() {
 
         {/* Day tracker */}
         <div
-          className={`card p-6 mb-10 max-w-lg opacity-0-init ${visible ? "animate-fade-up delay-300" : ""}`}
+          className={`card p-6 mb-10 w-full max-w-lg mx-auto md:mx-0 opacity-0-init ${visible ? "animate-fade-up delay-300" : ""}`}
         >
           <p
-            className="text-xs tracking-widest uppercase mb-3"
+            className="text-xs tracking-widest uppercase mb-3 text-center md:text-left"
             style={{ color: "var(--text-muted)" }}
           >
             Raise Day Tracker
           </p>
-          <div className="flex gap-3 items-center flex-wrap">
+          <div className="flex gap-3 items-center md:items-start justify-center md:justify-start flex-wrap">
             <div className="flex-1 min-w-0">
               <label
-                className="block text-xs mb-1"
+                className="block text-xs mb-1 text-center md:text-left"
                 style={{ color: "var(--text-muted)" }}
               >
                 Raise start date
@@ -150,7 +150,7 @@ export default function Hero() {
               />
             </div>
             {dayNumber !== null && (
-              <div className="flex gap-4 flex-wrap">
+              <div className="flex gap-4 items-center md:items-start justify-center md:justify-start flex-wrap">
                 <div className="text-center">
                   <div
                     className="font-display text-3xl"
@@ -199,7 +199,7 @@ export default function Hero() {
 
           {/* Progress dots */}
           {dayNumber !== null && (
-            <div className="mt-4 flex gap-1">
+            <div className="mt-4 flex items-center md:items-start gap-1">
               {phases.map((p, i) => {
                 const phaseDay = i * 15 + 1;
                 const inPhase = dayNumber >= phaseDay && dayNumber <= phaseDay + 14;
@@ -234,7 +234,7 @@ export default function Hero() {
             <button
               key={p.id}
               onClick={() => scrollToSection(p.id)}
-              className="card p-4 text-left group"
+              className="card p-4 text-center md:text-left group"
             >
               <div
                 className="day-badge mb-2"
@@ -260,7 +260,7 @@ export default function Hero() {
 
         {/* Scroll cue */}
         <div
-          className={`mt-16 flex items-center gap-3 opacity-0-init ${
+          className={`mt-16 flex items-center md:items-start justify-center md:justify-start gap-3 opacity-0-init ${
             visible ? "animate-fade-up delay-500" : ""
           }`}
         >
@@ -269,7 +269,7 @@ export default function Hero() {
             style={{ background: "var(--border)" }}
           />
           <span
-            className="text-xs tracking-widest uppercase"
+            className="text-center md:text-left text-xs tracking-widest uppercase"
             style={{ color: "var(--text-muted)" }}
           >
             Scroll to begin

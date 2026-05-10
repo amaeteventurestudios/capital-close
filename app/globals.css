@@ -141,6 +141,12 @@ h1, h2, h3, h4 {
   position: relative;
 }
 
+@media (max-width: 767px) {
+  .phase-section {
+    padding: 4rem 1.25rem 3rem;
+  }
+}
+
 /* Gold line */
 .gold-line {
   height: 1px;
