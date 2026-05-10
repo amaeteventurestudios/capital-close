@@ -130,16 +130,16 @@ export default function Hero() {
 
         {/* Day tracker */}
         <div
-          className={`card p-6 mb-10 w-full max-w-[480px] mx-auto opacity-0-init ${visible ? "animate-fade-up delay-300" : ""}`}
+          className={`card p-5 sm:p-6 mb-10 w-full max-w-[480px] mx-auto opacity-0-init ${visible ? "animate-fade-up delay-300" : ""}`}
         >
           <p
-            className="text-xs tracking-widest uppercase mb-3 text-center"
+            className="text-xs tracking-widest uppercase mb-5 text-center"
             style={{ color: "var(--text-muted)" }}
           >
             Raise Day Tracker
           </p>
-          <div className="flex gap-3 items-center justify-center flex-wrap">
-            <div className="flex-1 min-w-0">
+          <div className="space-y-6">
+            <div className="w-full max-w-[300px] mx-auto">
               <label
                 className="block text-xs mb-1 text-center"
                 style={{ color: "var(--text-muted)" }}
@@ -154,10 +154,10 @@ export default function Hero() {
               />
             </div>
             {dayNumber !== null && (
-              <div className="flex gap-4 items-center justify-center flex-wrap">
-                <div className="text-center">
+              <div className="grid grid-cols-3 gap-3 sm:gap-5 items-start">
+                <div className="min-w-0 text-center">
                   <div
-                    className="font-display text-3xl"
+                    className="font-display text-4xl"
                     style={{ color: "var(--gold)" }}
                   >
                     {Math.max(1, Math.min(90, dayNumber))}
@@ -169,9 +169,9 @@ export default function Hero() {
                     Today
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="min-w-0 text-center">
                   <div
-                    className="font-display text-3xl"
+                    className="font-display text-4xl"
                     style={{ color: daysRemaining === 0 ? "var(--gold)" : "var(--text-primary)" }}
                   >
                     {daysRemaining}
@@ -183,9 +183,9 @@ export default function Hero() {
                     Days Left
                   </div>
                 </div>
-                <div className="text-center">
+                <div className="min-w-0 text-center">
                   <div
-                    className="font-display text-lg pt-1"
+                    className="font-display text-2xl pt-1"
                     style={{ color: "var(--gold)" }}
                   >
                     {currentPhase}

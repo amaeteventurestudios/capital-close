@@ -28,7 +28,7 @@ function readingTime(phase: Phase): number {
 }
 
 export default function PhaseSection({ phase, searchQuery }: PhaseSectionProps) {
-  const [visible, setVisible] = useState(false);
+  const [visible, setVisible] = useState(phase.number === 1);
   const [expanded, setExpanded] = useState<Record<string, boolean>>({});
   const [notes, setNotes] = useState<Record<string, string>>({});
   const [checks, setChecks] = useState<Record<string, boolean>>({});
