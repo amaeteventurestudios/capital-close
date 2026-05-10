@@ -1,7 +1,8 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import { storage } from "@/lib/storage";
-import { phases } from "@/lib/content";
+import { phases, sectionIds } from "@/lib/content";
+import { scrollToSection } from "@/lib/scroll";
 
 export default function Hero() {
   const [startDate, setStartDate] = useState<string>("");
@@ -47,15 +48,12 @@ export default function Hero() {
     calculate(val);
   };
 
-  const scrollToPhase = (id: string) => {
-    document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
     <section
-      id="hero"
+      id={sectionIds.hero}
+      data-scroll-section={sectionIds.hero}
       ref={ref}
-      className="relative min-h-screen flex flex-col justify-center overflow-hidden"
+      className="scroll-section relative min-h-screen flex flex-col justify-center overflow-hidden"
       style={{ paddingTop: "80px" }}
     >
       {/* Background grid */}
@@ -209,7 +207,7 @@ export default function Hero() {
                 return (
                   <div
                     key={p.id}
-                    onClick={() => scrollToPhase(p.id)}
+                    onClick={() => scrollToSection(p.id)}
                     className="flex-1 h-1 rounded-full cursor-pointer transition-all"
                     style={{
                       background: done
@@ -235,7 +233,7 @@ export default function Hero() {
           {phases.map((p) => (
             <button
               key={p.id}
-              onClick={() => scrollToPhase(p.id)}
+              onClick={() => scrollToSection(p.id)}
               className="card p-4 text-left group"
             >
               <div

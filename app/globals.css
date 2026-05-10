@@ -21,6 +21,7 @@
   --text-muted: #5A5650;
   --border: rgba(201, 168, 76, 0.15);
   --border-bright: rgba(201, 168, 76, 0.4);
+  --page-outer: #080808;
 }
 
 .light {
@@ -47,13 +48,34 @@ html {
 }
 
 body {
-  background-color: var(--obsidian);
+  background-color: var(--page-outer);
   color: var(--text-primary);
   font-family: var(--font-body);
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.roadmap-shell {
+  width: min(calc(100% - 2rem), 72rem);
+  min-height: 100vh;
+  margin: 0 auto;
+  background: var(--obsidian);
+  border-left: 1px solid var(--border);
+  border-right: 1px solid var(--border);
+  box-shadow: 0 0 80px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.scroll-section {
+  scroll-margin-top: 4rem;
+}
+
+@media (max-width: 640px) {
+  .roadmap-shell {
+    width: 100%;
+  }
 }
 
 /* Scrollbar */

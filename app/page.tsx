@@ -103,7 +103,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main>
+    <main className="min-h-screen">
       <ProgressBar />
       <SideNav />
       <TopBar
@@ -112,12 +112,14 @@ export default function Home() {
         isDark={isDark}
         onExport={exportNotes}
       />
-      <Hero />
-      {phases.map((phase) => (
-        <PhaseSection key={phase.id} phase={phase} searchQuery={searchQuery} />
-      ))}
-      <ToolsSection />
-      <Footer />
+      <div className="roadmap-shell">
+        <Hero />
+        {phases.map((phase) => (
+          <PhaseSection key={phase.id} phase={phase} searchQuery={searchQuery} />
+        ))}
+        <ToolsSection />
+        <Footer />
+      </div>
     </main>
   );
 }

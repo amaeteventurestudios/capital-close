@@ -18,6 +18,11 @@ export interface Phase {
   completion_checklist?: string[];
 }
 
+export const sectionIds = {
+  hero: "hero",
+  tools: "tools",
+} as const;
+
 export const phases: Phase[] = [
   {
     id: "phase-1",

@@ -90,8 +90,9 @@ export default function PhaseSection({ phase, searchQuery }: PhaseSectionProps) 
   return (
     <section
       id={phase.id}
+      data-scroll-section={phase.id}
       ref={ref}
-      className="phase-section relative"
+      className="phase-section scroll-section relative"
     >
       {/* Section separator */}
       <div className="section-divider" />

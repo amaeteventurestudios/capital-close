@@ -4,6 +4,7 @@ import ObjectionVault from "./ObjectionVault";
 import BeliefStack from "./BeliefStack";
 import RoundCalculator from "./RoundCalculator";
 import OutreachBuilder from "./OutreachBuilder";
+import { sectionIds } from "@/lib/content";
 
 const toolList = [
   { id: "calculator", label: "Round Calculator", description: "Track raise progress and calculate what remains." },
@@ -27,7 +28,12 @@ export default function ToolsSection() {
   }, []);
 
   return (
-    <section id="tools" ref={ref} className="phase-section">
+    <section
+      id={sectionIds.tools}
+      data-scroll-section={sectionIds.tools}
+      ref={ref}
+      className="phase-section scroll-section"
+    >
       <div className="section-divider" />
       <div className="max-w-4xl mx-auto px-6">
         {/* Header */}
