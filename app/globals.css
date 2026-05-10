@@ -13,12 +13,12 @@
   --gold-dim: #8B6F2E;
   --gold-bright: #E8C66A;
   --obsidian: #0D0D0D;
-  --surface: #141414;
-  --surface-2: #1A1A1A;
-  --surface-3: #222222;
-  --text-primary: #F0EDE6;
-  --text-secondary: #A09A8E;
-  --text-muted: #5A5650;
+  --surface: #181818;
+  --surface-2: #1E1E1E;
+  --surface-3: #262626;
+  --text-primary: #F5F2EC;
+  --text-secondary: #C8C2B8;
+  --text-muted: #8A8480;
   --border: rgba(201, 168, 76, 0.15);
   --border-bright: rgba(201, 168, 76, 0.4);
   --page-outer: #080808;
