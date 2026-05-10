@@ -24,7 +24,7 @@ export default function Footer() {
             color: "var(--text-muted)",
           }}
         >
-          LPP Media · 90 Day $5M+ Raise Roadmap
+          Capital Close Partners · 90 Day Raise Roadmap
         </div>
       </div>
     </footer>

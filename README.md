@@ -1,6 +1,6 @@
 # 90 Day Raise Roadmap
 
-A cinematic, interactive web application for the LPP Media 90-Day $5M+ Raise Roadmap.
+A cinematic, interactive web application for the Capital Close Partners 90-Day $5M+ Raise Roadmap.
 
 ## Features
 

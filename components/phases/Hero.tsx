@@ -90,7 +90,7 @@ export default function Hero() {
             className="text-xs tracking-widest uppercase font-mono"
             style={{ color: "var(--gold)" }}
           >
-            LPP Media · Capital Raise System
+            CAPITAL CLOSE · CAPITAL CLOSE PARTNERS
           </span>
         </div>
 

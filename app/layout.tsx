@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "90 Day Raise Roadmap",
-  description: "The systematic framework for closing a $5M+ raise in 90 days.",
+  title: "Capital Close — 90 Day Raise Roadmap",
+  description: "The systematic framework for closing a $5M+ raise in 90 days. By Capital Close Partners.",
   openGraph: {
-    title: "90 Day Raise Roadmap",
-    description: "The systematic framework for closing a $5M+ raise in 90 days.",
+    title: "Capital Close — 90 Day Raise Roadmap",
+    description: "The systematic framework for closing a $5M+ raise in 90 days. By Capital Close Partners.",
   },
 };
 
